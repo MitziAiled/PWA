@@ -11,9 +11,9 @@
 		display:block;
 		margin:auto;
 	}
-	#carrera{
-		width: 250px;
-	}
+	#menu,h1,h3{
+		text-align:center;
+	}	
 </style>
 </head>
 <body>
@@ -33,78 +33,12 @@
 		}
 	%>
 	
-	<h1>Agregar Nueva Materia</h1>  
-		<form action="agregarmateria.jsp" method="post">  
-		<table>  
-			<tr>
-				<td>Clave Horario:</td>
-				<td><input type="text" name="clhorario"/></td>
-				<td>Clave Materia:</td>
-				<td><input type="text" name="clmateria"/></td>
-				<td>Clave Carrera:</td>
-				<td><input type="text" name="clcarrera" value="ISX" readonly/></td>
-			</tr>  
-			<tr>
-				<td>Materia:</td>
-				<td><input type="text" name="materia"/></td>
-				<td>Carrera:</td>
-				<td colspan="2"><input type="text" name="carrera" id="carrera" value="Ingenieria en Sistemas Computacionales" readonly/></td> 
-			<tr>
-				<td>Nombre del Maestro:</td>
-				<td><input type="text" name="maestro"/></td>
-				<td>Periodo:</td>
-				<td><input type="text" name="periodo"/></td>
-				<td>Turno:</td>
-				<td><input type="text" name="turno"/></td>
-			</tr>
-			<tr>
-				<td>Grupo:</td>
-				<td><input type="text" name="grupo"/></td>
-				<td>No. de Alumnos:</td>
-				<td><input type="text" name="noalumnos"/></td>
-				<td>Semestre:</td>
-				<td><input type="text" name="semestre"/></td>
-			</tr>
-			<tr>
-				<td>Creditos:</td>
-				<td><input type="text" name="creditos"/></td>
-				<td>Horas Teóricas:</td>
-				<td><input type="text" name="ht"/></td>
-				<td>Horas Practicas:</td>
-				<td><input type="text" name="hp"/></td>
-			</tr>
-			<tr>
-				<td>Lunes:</td>
-				<td><input type="text" name="lunes"/></td>
-				<td>Salón del Lunes:</td>
-				<td><input type="text" name="salonlunes"/></td>
-			</tr>
-			<tr>
-				<td>Martes:</td>
-				<td><input type="text" name="martes"/></td>
-				<td>Salon del Martes:</td>
-				<td><input type="text" name="salonmartes"/></td>
-			</tr>
-			<tr>
-				<td>Miércoles:</td>
-				<td><input type="text" name="miercoles"/></td>
-				<td>Salon del Miércoles:</td>
-				<td><input type="text" name="salonmiercoles"/></td>
-			</tr>
-			<tr>
-				<td>Jueves:</td>
-				<td><input type="text" name="jueves"/></td>
-				<td>Salon del Jueves:</td>
-				<td><input type="text" name="salonjueves"/></td>
-			</tr>
-			<tr>
-				<td>Viernes:</td>
-				<td><input type="text" name="viernes"/></td>
-				<td>Salon del Viernes:</td>
-				<td><input type="text" name="salonviernes"/></td>
-			</tr>
-			<tr><td colspan="2"><input type="submit" value="Agregar Materia"/></td></tr>  
-		</table>  
-	</form> 
+	<h1>B I E N V E N I D O<h1>
+	<h3>Menú Principal</h3>
+	<div id="menu">
+		<a href="materia.jsp">MATERIAS</a>        |     
+		<a href="sabana.jsp">SABANA</a>        |     
+		<a href="horario.jsp">HORARIO</a>
+	</div>
 </body>
 </html>
