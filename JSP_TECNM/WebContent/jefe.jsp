@@ -50,7 +50,7 @@
 				<td>Carrera:</td>
 				<td colspan="2"><input type="text" name="carrera" id="carrera" value="Ingenieria en Sistemas Computacionales" readonly/></td> 
 			<tr>
-				<td>Maestro:</td>
+				<td>Nombre del Maestro:</td>
 				<td><input type="text" name="maestro"/></td>
 				<td>Periodo:</td>
 				<td><input type="text" name="periodo"/></td>
@@ -68,6 +68,10 @@
 			<tr>
 				<td>Creditos:</td>
 				<td><input type="text" name="creditos"/></td>
+				<td>Horas Teóricas:</td>
+				<td><input type="text" name="ht"/></td>
+				<td>Horas Practicas:</td>
+				<td><input type="text" name="hp"/></td>
 			</tr>
 			<tr>
 				<td>Lunes:</td>
@@ -98,9 +102,6 @@
 				<td><input type="text" name="viernes"/></td>
 				<td>Salon del Viernes:</td>
 				<td><input type="text" name="salonviernes"/></td>
-			</tr>
-			<tr>
-				
 			</tr>
 			<tr><td colspan="2"><input type="submit" value="Agregar Materia"/></td></tr>  
 		</table>  

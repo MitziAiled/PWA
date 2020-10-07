@@ -22,4 +22,4 @@
 	%>
 	<h1>BIENVENIDO MAESTRO</h1> 
 </body>
-</html>l>
+</html>

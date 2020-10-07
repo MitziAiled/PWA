@@ -19,7 +19,7 @@ public class conexion {
 		PreparedStatement pst;
 		ResultSet rs;
 		int rol = 0;
-		String sql = "select rol from usuarios where usuario ='" + us + "' and contrasena ='" + contra + "'";
+		String sql = "select rol from usuario where usuario ='" + us + "' and contrasena ='" + contra + "'";
 		try {
 			Class.forName(this.driver);
 			conn = DriverManager.getConnection(this.url,this.uss,this.pass);
