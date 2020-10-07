@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mi Primer CRUD</title>
+</head>
+<body>
+	<h1>CRUD Lista de Alumnos</h1>  
+	<form action="SaveServlet" method="post">  
+		<table>  
+		<tr>
+			<td>No. de Control:</td>
+			<td><input type="text" name="numcontrol"/></td>
+		</tr>  
+		<tr>
+			<td>Nombre:</td>
+			<td><input type="text" name="nombre"/></td>
+		</tr>  
+		<tr>
+			<td>Curso:</td>
+			<td>
+				<select name="curso" style="width:150px">
+					<option>CO</option>
+					<option>CR</option>
+					<option>CE</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Semestre:</td>
+			<td><input type="text" name="semestre"></td>
+		</tr>  
+<tr><td colspan="2"><input type="submit" value="Guardar Alumno"/></td></tr>  
+</table>  
+</form>  
+  
+<br/>  
+<a href="ViewServlet">Ver Alumnos Registrados</a>  
+</body>
+</html>
