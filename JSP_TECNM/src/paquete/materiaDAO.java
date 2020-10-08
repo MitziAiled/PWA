@@ -106,5 +106,18 @@ public class materiaDAO {
 	    }  
 	    return status;  
 	} 
-	      
-	} 
+
+	public static int eliminarmateria(materia u){  
+	    int status=0;  
+	    try{  
+	        Connection con=getConnection();  
+	        PreparedStatement ps=con.prepareStatement("delete from materia where id_materia=?");  
+	        ps.setInt(1,u.getId());  
+	        status=ps.executeUpdate();  
+	    }catch(Exception e){
+	    	System.out.println(e);
+	    }
+	    return status;  
+	}
+	
+} 

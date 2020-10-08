@@ -53,7 +53,7 @@
 					<td>${u.getHorast()}</td>
 					<td>${u.getHorasp()}</td>  
 					<td><a href="formeditarmateria.jsp?id=${u.getId()}">Editar</a></td>  
-					<td><a href=".jsp?id=${u.getId()}">Eliminar</a></td>
+					<td><a href="borrarmateria.jsp?id=${u.getId()}">Eliminar</a></td>
 				</tr>  
 			</c:forEach>  
 		</table>  
