@@ -4,7 +4,7 @@ public class materia {
 	private int id;  
 	private String clave;
 	private String nombre;
-	private String semestre;
+	private int semestre;
 	private String carrera;
 	private int creditos;
 	private int horast;
@@ -28,10 +28,10 @@ public class materia {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getSemestre() {
+	public int getSemestre() {
 		return semestre;
 	}
-	public void setSemestre(String semestre) {
+	public void setSemestre(int semestre) {
 		this.semestre = semestre;
 	}
 	public String getCarrera() {

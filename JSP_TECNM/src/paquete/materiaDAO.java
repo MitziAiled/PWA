@@ -10,7 +10,9 @@ public class materiaDAO {
 	    try{  
 	        Class.forName("com.mysql.jdbc.Driver");  
 	        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/proyectojsp_tecnm","root","");  
-	    }catch(Exception e){System.out.println(e);}  
+	    }catch(Exception e){
+	    	System.out.println(e);
+	    }  
 	    return con;  
 	} 
 	
@@ -19,10 +21,10 @@ public class materiaDAO {
 	    try{  
 	        Connection con=getConnection();  
 	        PreparedStatement ps=con.prepareStatement(  
-	        		"insert into materia(clave,nombre,semestre,carrera,creditos,horas_t,horas_p) values(?,?,?,?,?,?,?)");  
+	        		"insert into materia(clave,nombre,semestre,carrera,creditos,horas_t,horas_p) values(?,?,?,?,?,?,?)");
 	        ps.setString(1,u.getClave());  
 	        ps.setString(2,u.getNombre());  
-	        ps.setString(3,u.getSemestre());  
+	        ps.setInt(3,u.getSemestre());  
 	        ps.setString(4,u.getCarrera());  
 	        ps.setInt(5,u.getCreditos());
 	        ps.setInt(6,u.getHorast());
@@ -46,7 +48,7 @@ public class materiaDAO {
 	            u.setId(rs.getInt("id_materia"));  
 	            u.setClave(rs.getString("clave"));  
 	            u.setNombre(rs.getString("nombre"));  
-	            u.setSemestre(rs.getString("semestre"));  
+	            u.setSemestre(rs.getInt("semestre"));  
 	            u.setCarrera(rs.getString("carrera"));  
 	            u.setCreditos(rs.getInt("creditos"));  
 	            u.setHorast(rs.getInt("horas_t")); 

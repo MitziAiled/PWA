@@ -33,7 +33,7 @@
 		}
 	%>
 	
-	<h1>B I E N V E N I D O<h1>
+	<h1>B I E N V E N I D O</h1>
 	<h3>Menú Principal</h3>
 	<div id="menu">
 		<a href="vermateria.jsp">MATERIAS</a>        |     

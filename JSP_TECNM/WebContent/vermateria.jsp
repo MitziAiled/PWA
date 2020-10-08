@@ -8,8 +8,18 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Vista de Materias</title>  
+		<style>
+			#menu{
+				text-align:center;
+			}
+		</style>
 	</head>  
-	<body>  
+	<body>
+		<div id="menu">
+			<a href="vermateria.jsp">MATERIAS</a>        |     
+			<a href="sabana.jsp">SABANA</a>        |     
+			<a href="horario.jsp">HORARIO</a>
+		</div>  
 		<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
 		<h1>Lista de Materias</h1>
 		<a href="formulariomateria.jsp">Agregar una Materia</a>  
