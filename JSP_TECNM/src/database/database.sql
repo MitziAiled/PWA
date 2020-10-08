@@ -30,7 +30,8 @@ PRIMARY KEY (`id_materia`)
 CREATE TABLE `proyectojsp_tecnm`.`horario` (
 `id_horario` INT NOT NULL AUTO_INCREMENT,
 `clave` INT NOT NULL, `grupo` VARCHAR(255) NULL,
-`periodo` BOOLEAN NULL,
+`periodo` VARCHAR(255) NULL,
+`turno` VARCHAR(255) NULL,
 `numero_estudiantes` INT NULL,
 `salon` VARCHAR(255) NULL,
 `lunes` VARCHAR(255) NULL,
