@@ -36,7 +36,7 @@
 	<h1>B I E N V E N I D O<h1>
 	<h3>Menú Principal</h3>
 	<div id="menu">
-		<a href="materia.jsp">MATERIAS</a>        |     
+		<a href="vermateria.jsp">MATERIAS</a>        |     
 		<a href="sabana.jsp">SABANA</a>        |     
 		<a href="horario.jsp">HORARIO</a>
 	</div>

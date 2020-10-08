@@ -19,10 +19,6 @@
 </style>
 </head>
 <body>
-	<a href="login.jsp">Login</a>        |     
-	<a href="logout.jsp">Logout</a>        |     
-	<a href="profile.jsp">Perfil</a>
-	<br>
 	<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
 	<h1>APLICACIÓN WEB CON JSP</h1>
 	<h4>Inicia sesión para ingresar al sistema</h4>
