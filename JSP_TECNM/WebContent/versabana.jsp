@@ -6,7 +6,7 @@
 <html>
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Sabana</title>
 		<style>
 					#menu{
 						text-align:center;
@@ -17,7 +17,7 @@
 		<div id="menu">
 				<a href="vermateria.jsp">MATERIAS</a>        |     
 				<a href="versabana.jsp">SABANA</a>        |     
-				<a href="horario.jsp">HORARIO</a>
+				<a href="verreporte.jsp">REPORTES</a>
 		</div>  
 		<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
 		<h1>SABANA DE MATERIAS:</h1>

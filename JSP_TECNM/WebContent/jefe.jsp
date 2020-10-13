@@ -38,7 +38,7 @@
 	<div id="menu">
 		<a href="vermateria.jsp">MATERIAS</a>        |     
 		<a href="versabana.jsp">SABANA</a>        |     
-		<a href="reporte.jsp">REPORTES</a>
+		<a href="verreporte.jsp">REPORTES</a>
 	</div>
 </body>
 </html>
