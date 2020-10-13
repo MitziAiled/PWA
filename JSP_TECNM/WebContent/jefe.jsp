@@ -37,7 +37,7 @@
 	<h3>Menú Principal</h3>
 	<div id="menu">
 		<a href="vermateria.jsp">MATERIAS</a>        |     
-		<a href="sabana.jsp">SABANA</a>        |     
+		<a href="versabana.jsp">SABANA</a>        |     
 		<a href="reporte.jsp">REPORTES</a>
 	</div>
 </body>
