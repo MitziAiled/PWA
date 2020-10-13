@@ -16,7 +16,7 @@
 		<div id="menu">
 			<a href="vermateria.jsp">MATERIAS</a>        |     
 			<a href="sabana.jsp">SABANA</a>        |     
-			<a href="horario.jsp">HORARIO</a>
+			<a href="horario.jsp">REPORTES</a>
 		</div>  
 		<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
 		<br>
