@@ -25,7 +25,7 @@ public class sabanaDAO {
 	        ResultSet rs=ps.executeQuery();  
 	        while(rs.next()){  
 	            sabana s = new sabana();
-	            s.setId_sabana(rs.getInt("id_sabana"));
+	            s.setId(rs.getInt("id"));
 	            s.setClavehorario(rs.getString("clavehorario"));
 	            s.setClavemateria(rs.getString("clavemateria"));
 	            s.setClavecarrera(rs.getString("clavecarrera"));

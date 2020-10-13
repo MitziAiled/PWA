@@ -50,7 +50,7 @@
 			</tr>  
 			<c:forEach items="${list}" var="s">  
 				<tr>
-					<td>${s.getId_sabana()}</td>
+					<td>${s.getId()}</td>
 					<td>${s.getClavehorario()}</td>
 					<td>${s.getClavemateria()}</td>
 					<td>${s.getClavecarrera()}</td>

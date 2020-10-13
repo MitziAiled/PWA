@@ -1,7 +1,7 @@
 package paquete;
 
 public class sabana {
-	private int id_sabana;
+	private int id;
 	private String clavehorario;
 	private String clavemateria;
 	private String clavecarrera;
@@ -21,11 +21,11 @@ public class sabana {
 	private String viernes;
 	private String salon;
 	
-	public int getId_sabana() {
-		return id_sabana;
+	public int getId() {
+		return id;
 	}
-	public void setId_sabana(int id_sabana) {
-		this.id_sabana = id_sabana;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getClavehorario() {
 		return clavehorario;
