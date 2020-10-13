@@ -20,6 +20,19 @@
 		</div>  
 		<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
 		<br>
+		<%
+		HttpSession sesion = request.getSession(); 
+		String usuario;
+		String rol;
+		
+		if(sesion.getAttribute("user")!=null && sesion.getAttribute("rol")!=null){
+			usuario = sesion.getAttribute("user").toString(); 
+			rol = sesion.getAttribute("rol").toString();
+			out.print("<a href='login.jsp?cerrar=true'>Cerrar sesion</a>");
+		}else{
+			out.print("<script>location.replace('login.jsp');</script>");
+		}
+		%>
 		<%  
 			String id=request.getParameter("id");  
 			materia u=materiaDAO.getRecordById(Integer.parseInt(id));  

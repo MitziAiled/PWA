@@ -18,9 +18,22 @@
 		<div id="menu">
 			<a href="vermateria.jsp">MATERIAS</a>        |     
 			<a href="versabana.jsp">SABANA</a>        |     
-			<a href="verreportes.jsp">REPORTES</a>
+			<a href="verreporte.jsp">REPORTES</a>
 		</div>  
 		<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
+		<%
+		HttpSession sesion = request.getSession(); 
+		String usuario;
+		String rol;
+		
+		if(sesion.getAttribute("user")!=null && sesion.getAttribute("rol")!=null){
+			usuario = sesion.getAttribute("user").toString(); 
+			rol = sesion.getAttribute("rol").toString();
+			out.print("<a href='login.jsp?cerrar=true'>Cerrar sesion</a>");
+		}else{
+			out.print("<script>location.replace('login.jsp');</script>");
+		}
+		%>
 		<h1>Lista de Materias</h1>
 		<a href="formulariomateria.jsp">Agregar una Materia</a>  
 		  

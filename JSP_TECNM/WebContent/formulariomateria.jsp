@@ -19,6 +19,19 @@
 		</div>  
 		<img src="http://capacitacion.itleon.edu.mx/imagen/BANNER.jpeg">
 		<br>
+		<%
+		HttpSession sesion = request.getSession(); 
+		String usuario;
+		String rol;
+		
+		if(sesion.getAttribute("user")!=null && sesion.getAttribute("rol")!=null){
+			usuario = sesion.getAttribute("user").toString(); 
+			rol = sesion.getAttribute("rol").toString();
+			out.print("<a href='login.jsp?cerrar=true'>Cerrar sesion</a>");
+		}else{
+			out.print("<script>location.replace('login.jsp');</script>");
+		}
+		%>
 		<a href="vermateria.jsp">Lista de Materias</a><br/>  
 		<h1>Registrar una Materia</h1>  
 		<form action="agregarmateria.jsp" method="post">  
