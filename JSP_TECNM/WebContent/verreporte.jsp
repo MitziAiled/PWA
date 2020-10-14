@@ -33,11 +33,11 @@
 			out.print("<script>location.replace('login.jsp');</script>");
 		}
 		%>
+		<h1>REPORTES DE MAESTROS:</h1>
 		<%  
-		List<reporte> list = reporteDAO.getAllTeacher();  
+		List<reporte> list = reporteDAO.getAllRecords();  
 		request.setAttribute("list",list);  
 		%>
-		<h1>REPORTES DE MAESTROS:</h1>
 		<table border="1" width="90%">
 			<tr>
 				<th>CLAVE MAESTRO</th>	
@@ -45,11 +45,11 @@
 				<th>REPORTE</th>
 			</tr>
 			<tr>
-				<c:forEach items="${list}" var="r">  
+				<c:forEach items="${list}" var="u">  
 				<tr>
-					<td>${r.getClavemaestro()}</td>
-					<td>${r.getMaestro()}</td> 
-					<td><a href="formularioreporte.jsp?id=${u.getClavemaestro()}">Ver reporte</a></td>
+					<td>${u.getClavemaestro()}</td>
+					<td>${u.getMaestro()}</td> 
+					<td><a href="formularioreporte.jsp?clavemaestro=${u.getClavemaestro()}">Ver reporte</a></td>
 				</tr>  
 			</c:forEach> 
 			</tr>

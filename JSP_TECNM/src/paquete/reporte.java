@@ -1,33 +1,25 @@
 package paquete;
 
 public class reporte {
-	private String clavemaestro;
 	private String usuario;
 	private String contrasena;
 	private String maestro;
-	private int clavehorario;
+	private int clavemaestro;
 	private String clavemateria;
-	private String clavecarrera;
 	private String materia;
-	private String carrera;
-	private String periodo;
-	private String turno;
 	private String grupo;
-	private int  alumnos;
-	private int semestre;
-	private int creditos;
 	private String salon;
+	private int alumnos;
+	private String clavecarrera;
+	private int semestre;
 	private String lunes;
 	private String martes;
 	private String miercoles;
 	private String jueves;
 	private String viernes;
-	public String getClavemaestro() {
-		return clavemaestro;
-	}
-	public void setClavemaestro(String clavemaestro) {
-		this.clavemaestro = clavemaestro;
-	}
+	private int horast;
+	private int horasp;
+	private int creditos;
 	public String getUsuario() {
 		return usuario;
 	}
@@ -46,11 +38,11 @@ public class reporte {
 	public void setMaestro(String maestro) {
 		this.maestro = maestro;
 	}
-	public int getClavehorario() {
-		return clavehorario;
+	public int getClavemaestro() {
+		return clavemaestro;
 	}
-	public void setClavehorario(int clavehorario) {
-		this.clavehorario = clavehorario;
+	public void setClavemaestro(int clavemaestro) {
+		this.clavemaestro = clavemaestro;
 	}
 	public String getClavemateria() {
 		return clavemateria;
@@ -58,35 +50,11 @@ public class reporte {
 	public void setClavemateria(String clavemateria) {
 		this.clavemateria = clavemateria;
 	}
-	public String getClavecarrera() {
-		return clavecarrera;
-	}
-	public void setClavecarrera(String clavecarrera) {
-		this.clavecarrera = clavecarrera;
-	}
 	public String getMateria() {
 		return materia;
 	}
 	public void setMateria(String materia) {
 		this.materia = materia;
-	}
-	public String getCarrera() {
-		return carrera;
-	}
-	public void setCarrera(String carrera) {
-		this.carrera = carrera;
-	}
-	public String getPeriodo() {
-		return periodo;
-	}
-	public void setPeriodo(String periodo) {
-		this.periodo = periodo;
-	}
-	public String getTurno() {
-		return turno;
-	}
-	public void setTurno(String turno) {
-		this.turno = turno;
 	}
 	public String getGrupo() {
 		return grupo;
@@ -94,29 +62,29 @@ public class reporte {
 	public void setGrupo(String grupo) {
 		this.grupo = grupo;
 	}
+	public String getSalon() {
+		return salon;
+	}
+	public void setSalon(String salon) {
+		this.salon = salon;
+	}
 	public int getAlumnos() {
 		return alumnos;
 	}
 	public void setAlumnos(int alumnos) {
 		this.alumnos = alumnos;
 	}
+	public String getClavecarrera() {
+		return clavecarrera;
+	}
+	public void setClavecarrera(String clavecarrera) {
+		this.clavecarrera = clavecarrera;
+	}
 	public int getSemestre() {
 		return semestre;
 	}
 	public void setSemestre(int semestre) {
 		this.semestre = semestre;
-	}
-	public int getCreditos() {
-		return creditos;
-	}
-	public void setCreditos(int creditos) {
-		this.creditos = creditos;
-	}
-	public String getSalon() {
-		return salon;
-	}
-	public void setSalon(String salon) {
-		this.salon = salon;
 	}
 	public String getLunes() {
 		return lunes;
@@ -148,7 +116,24 @@ public class reporte {
 	public void setViernes(String viernes) {
 		this.viernes = viernes;
 	}
-	
+	public int getHorast() {
+		return horast;
+	}
+	public void setHorast(int horast) {
+		this.horast = horast;
+	}
+	public int getHorasp() {
+		return horasp;
+	}
+	public void setHorasp(int horasp) {
+		this.horasp = horasp;
+	}
+	public int getCreditos() {
+		return creditos;
+	}
+	public void setCreditos(int creditos) {
+		this.creditos = creditos;
+	}
 	
 	
 }
