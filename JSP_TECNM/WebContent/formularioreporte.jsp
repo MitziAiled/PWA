@@ -40,6 +40,8 @@
 			List<reporte> list = reporteDAO.getAllInformation(Integer.parseInt(clavemaestro));  
 			request.setAttribute("list",list); 
 		%>
+			<br>
+			<br>
 			<table border=1>
 				<tr>
 					<td>Nombre del Maestro: </td>
@@ -48,6 +50,10 @@
 				<tr>
 					<td>Clave del maestro: </td>
 					<td>${list[0].getClavemaestro()}</td>
+				</tr>
+				<tr>
+					<td>Horas por impartir: </td>
+					<td>${list[0].getCreditos()}</td>
 				</tr>
 			</table>
 			<br><br>

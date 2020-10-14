@@ -83,4 +83,31 @@ public class reporteDAO {
 	    
 	    return list;  
 	}
+	
+	public static List<reporte> getAllTeacher(String usuario){  
+	    List<reporte> list = new ArrayList<reporte>();  
+	      
+	    try{  
+	        Connection con=getConnection();  
+	        PreparedStatement ps=con.prepareStatement("SELECT sabana.maestro, sabana.clavemaestro, sabana.clavemateria, " + 
+	        		"sabana.materia, sabana.grupo, sabana.salon, sabana.alumnos, sabana.clavecarrera, sabana.semestre, " + 
+	        		"sabana.lunes, sabana.martes, sabana.miercoles,sabana.jueves, " + 
+	        		"sabana.viernes, sabana.horast, sabana.horasp, sabana.creditos " + 
+	        		"FROM sabana " + 
+	        		"JOIN usuario ON sabana.clavemaestro = usuario.clavemaestro " + 
+	        		"WHERE usuario.usuario = '?'");  
+	        ResultSet rs=ps.executeQuery();  
+	        while(rs.next()){  
+	            reporte u=new reporte();  
+	            u.setClavemaestro(rs.getInt("clavemaestro"));  
+	            u.setMaestro(rs.getString("maestro"));
+	            list.add(u);  
+	        }  
+	    }catch(Exception e){
+	    	System.out.println(e);
+	    }  
+	    
+	    return list;  
+	}
+	
 }
