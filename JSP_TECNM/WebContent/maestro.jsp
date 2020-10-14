@@ -13,7 +13,7 @@
 	<br>
 		<%
 		HttpSession sesion = request.getSession(); 
-		String usuario;
+		String usuario="";
 		String rol;
 		
 		if(sesion.getAttribute("user")!=null && sesion.getAttribute("rol")!=null){
@@ -25,11 +25,11 @@
 		}
 		%>
 		<h1>REPORTE:</h1>
-		<%  
-		String uss=request.getParameter("usuario");
-		request.setAttribute("usuario", uss);
-		List<reporte> list = reporteDAO.getAllTeacher(uss);  
-		request.setAttribute("list",list);  
+		<%
+		String usu = sesion.getAttribute("user").toString();
+		request.setAttribute("usuario", usu);
+		List<reporte> list = reporteDAO.getAllTeacher(usu);  
+		request.setAttribute("list",list); 
 		%>
 		<br>
 			<br>
@@ -38,6 +38,53 @@
 					<td>Nombre del Maestro: </td>
 					<td>${list[0].getMaestro()}</td>
 				</tr>
-		</table>
+				<tr>
+					<td>Clave del maestro: </td>
+					<td>${list[0].getClavemaestro()}</td>
+				</tr>
+				<tr>
+					<td>Horas por impartir: </td>
+					<td>${list[0].getCreditos()}</td>
+				</tr>
+			</table>
+			<br><br>
+			<table border=1>
+				<tr>
+					<td>Clave Materia</td>
+					<td>Materia</td>
+					<td>Grupo</td>
+					<td>Salon</td>
+					<td>Alumnos</td>
+					<td>Clave Carrera</td>
+					<td>Semestre</td>
+					<td>Lunes</td>
+					<td>Martes</td>
+					<td>Miercoles</td>
+					<td>Jueves</td>
+					<td>Viernes</td>
+					<td>HT</td>
+					<td>HP</td>
+					<td>Creditos</td>
+				</tr>
+				<c:forEach items="${list}" var="report">
+					 	<tr>
+					 		<td>${report.getClavemateria()}</td>
+					 		<td>${report.getMateria()}</td>
+					 		<td>${report.getGrupo()}</td>
+					 		<td>${report.getSalon()}</td>
+					 		<td>${report.getAlumnos()}</td>
+					 		<td>${report.getClavecarrera()}</td>
+					 		<td>${report.getSemestre()}</td>
+					 		<td>${report.getLunes()}</td>
+					 		<td>${report.getMartes()}</td>
+					 		<td>${report.getMiercoles()}</td>
+					 		<td>${report.getJueves()}</td>
+					 		<td>${report.getViernes()}</td>
+					 		<td>${report.getHorast()}</td>
+					 		<td>${report.getHorasp()}</td>
+					 		<td>${report.getCreditos()}</td>
+					 	</tr>
+				 	</c:forEach>
+			</table>
 </body>
 </html>

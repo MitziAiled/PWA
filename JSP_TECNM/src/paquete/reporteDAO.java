@@ -95,12 +95,28 @@ public class reporteDAO {
 	        		"sabana.viernes, sabana.horast, sabana.horasp, sabana.creditos " + 
 	        		"FROM sabana " + 
 	        		"JOIN usuario ON sabana.clavemaestro = usuario.clavemaestro " + 
-	        		"WHERE usuario.usuario = '?'");  
+	        		"WHERE usuario.usuario = ?");  
+	        ps.setString(1, usuario);
 	        ResultSet rs=ps.executeQuery();  
 	        while(rs.next()){  
 	            reporte u=new reporte();  
 	            u.setClavemaestro(rs.getInt("clavemaestro"));  
 	            u.setMaestro(rs.getString("maestro"));
+	            u.setClavemateria(rs.getString("clavemateria"));
+	            u.setMateria(rs.getString("materia"));
+	            u.setGrupo(rs.getString("grupo"));
+	            u.setSalon(rs.getString("salon"));
+	            u.setAlumnos(rs.getInt("alumnos"));
+	            u.setClavecarrera(rs.getString("clavecarrera"));
+	            u.setSemestre(rs.getInt("semestre"));
+	            u.setLunes(rs.getString("lunes"));
+	            u.setMartes(rs.getString("martes"));
+	            u.setMiercoles(rs.getString("miercoles"));
+	            u.setJueves(rs.getString("jueves"));
+	            u.setViernes(rs.getString("viernes"));
+	            u.setHorast(rs.getInt("horast"));
+	            u.setHorasp(rs.getInt("horasp"));
+	            u.setCreditos(rs.getInt("creditos"));
 	            list.add(u);  
 	        }  
 	    }catch(Exception e){
