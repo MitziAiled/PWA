@@ -1,93 +1,90 @@
-create database proyectojsp_tecnm;
-
 use proyectojsp_tecnm;
 
-/*--------------------CREACION DE LAS TABLAS--------------------*/
-CREATE TABLE `proyectojsp_tecnm`.`usuario` (
-`clavemaestro` int NOT NULL,
-`prefijo` VARCHAR(255) NOT NULL,
-`nombre` VARCHAR(255) NOT NULL ,
-`apellidopat` VARCHAR(255) NOT NULL ,
-`apellidomat` VARCHAR(255) NOT NULL ,
-`usuario` VARCHAR(255) NOT NULL ,
-`contrasena` VARCHAR(255) NOT NULL ,
-`rol` INT(1) NOT NULL ,
-PRIMARY KEY (`clavemaestro`)
+CREATE TABLE usuario (
+clavemaestro int NOT NULL,
+prefijo VARCHAR(255) NOT NULL,
+nombre VARCHAR(255) NOT NULL ,
+apellidopat VARCHAR(255) NOT NULL ,
+apellidomat VARCHAR(255) NOT NULL ,
+usuario VARCHAR(255) NOT NULL ,
+contrasena VARCHAR(255) NOT NULL ,
+rol INT(1) NOT NULL ,
+PRIMARY KEY (clavemaestro)
 );
 
-CREATE TABLE `proyectojsp_tecnm`.`materia` (
-`id_materia` INT NOT NULL AUTO_INCREMENT ,
-`clave` VARCHAR (255) NOT NULL ,
-`nombre` VARCHAR (255) NOT NULL ,
-`semestre` INT NOT NULL ,
-`carrera` VARCHAR (255) NOT NULL ,
-`creditos` INT NOT NULL ,
-`horas_t` INT NOT NULL ,
-`horas_p` INT NOT NULL ,
-`maestro` INT NOT NULL ,
-PRIMARY KEY (`id_materia`)
+CREATE TABLE materia (
+id_materia INT NOT NULL AUTO_INCREMENT ,
+clave VARCHAR (255) NOT NULL ,
+nombre VARCHAR (255) NOT NULL ,
+semestre INT NOT NULL ,
+carrera VARCHAR (255) NOT NULL ,
+creditos INT NOT NULL ,
+horas_t INT NOT NULL ,
+horas_p INT NOT NULL ,
+PRIMARY KEY (id_materia)
 );
 
-CREATE TABLE `proyectojsp_tecnm`.`sabana` (
-`id` INT NOT NULL AUTO_INCREMENT,
-`clavehorario` INT NOT NULL,
-`clavemateria` VARCHAR(255) NOT NULL,
-`clavecarrera` VARCHAR(255) NOT NULL,
-`materia` VARCHAR(255) NOT NULL,
-`carrera` VARCHAR(255) NOT NULL,
-`clavemaestro` int NOT NULL,
-`maestro` VARCHAR(255) NOT NULL,
-`periodo` VARCHAR(255) NOT NULL,
-`turno` VARCHAR(255) NOT NULL,
-`grupo` VARCHAR(255) NOT NULL,
-`alumnos` INT NOT NULL,
-`semestre` INT NOT NULL,
-`creditos` INT NOT NULL,
-`salon` VARCHAR(255) NULL,
-`lunes` VARCHAR(255) NULL,
-`martes` VARCHAR(255) NULL,
-`miercoles` VARCHAR(255) NULL,
-`jueves` VARCHAR(255) NULL,
-`viernes` VARCHAR(255) NULL,
-`horas_t` int NULL,
-`horas_p` int NULL,
+CREATE TABLE sabana (
+id INT NOT NULL AUTO_INCREMENT,
+clavehorario INT NOT NULL,
+clavemateria VARCHAR(255) NOT NULL,
+clavecarrera VARCHAR(255) NOT NULL,
+materia VARCHAR(255) NOT NULL,
+carrera VARCHAR(255) NOT NULL,
+clavemaestro int NOT NULL,
+maestro VARCHAR(255) NOT NULL,
+periodo VARCHAR(255) NOT NULL,
+turno VARCHAR(255) NOT NULL,
+grupo VARCHAR(255) NOT NULL,
+alumnos INT NOT NULL,
+semestre INT NOT NULL,
+creditos INT NOT NULL,
+salon VARCHAR(255) NULL,
+lunes VARCHAR(255) NULL,
+martes VARCHAR(255) NULL,
+miercoles VARCHAR(255) NULL,
+jueves VARCHAR(255) NULL,
+viernes VARCHAR(255) NULL,
+horast int NULL,
+horasp int NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (clavemaestro) references usuario(clavemaestro);
+FOREIGN KEY (clavemaestro) references usuario(clavemaestro)
 );
 
-/*--------------------INSERCIONES DE LAS TABLAS--------------------*/
-INSERT INTO usuario (clavemaestro, prefijo, nombre, apellidopat, apellidomat, usuario, contrasena, rol)
-VALUES	("S25", "Ingeniero", "Antonio", "Águila", "Reyes", "aguila", "12345", 1),
-		("S26", "Doctora", "María del Rosario", "Baltazar", "Flores", "baltazar", "123", 2),
-		("S27", "Ingeniero", "José Gerardo", "Carpio", "Flores", "carpiof", "123", 2),
-		("S28", "Doctor", "Juan Martín", "Carpio", "Valadez", "carpiov", "123", 2),
-		("S29", "Licenciada", "Elizabeth", "Castellanos", "Nolasco", "nolasco", "123", 2),
-		("S30", "Ingeniera", "María Patricia", "Castillo", "Martínez", "castillo", "123", 2),
-		("S31", "Ingeniero", "Luis Roberto", "Gallegos", "Muñoz", "gallegos", "123", 2),
-		("S32", "Ingeniero", "Domingo", "García", "Ornelas", "domingo", "123", 2),
-		("S33", "Ingeniero", "Hector Federico", "Godínez", "Cabrera", "godinez", "123", 2),
-		("S34", "Ingeniera", "Laura Patricia", "Guevara", "Rangel", "laurap", "123", 2),
-		("S35", "Ingeniero", "Luis Eduardo", "Gutiérrez", "Ayala", "ayala", "123", 2),
-		("S36", "Ingeniera", "Angélica Benita", "Hernández", "Carranza", "benita", "123", 2),
-		("S37", "Ingeniera", "Laura", "Juárez", "Guerra", "laura", "123", 2),
-		("S38", "Ingeniero", "Carlos Rafael", "Levy", "Rojas", "levy", "123", 2),
-		("S39", "Ingeniero", "Eugenio Conrado", "Marín", "González", "conrado", "123", 2),
-		("S40", "Ingeniera", "Ana Columba Zurita", "Martínez", "Aguilar", "columba", "123", 2),
-		("S41", "Ingeniero", "José Elias", "Martínez", "Arias", "elias", "123", 2),
-		("S42", "Ingeniera", "Edna Militza", "Martínez", "Prado", "militza", "123", 2),
-		("S43", "Ingeniero", "Juan Pablo", "Murillo", "Ruiz", "murillo", "123", 2),
-		("S44", "Licenciada", "Angélica María", "Ortiz", "Gaucín", "gaucin", "123", 2),
-		("S45", "Licenciado", "Héctor José", "Puga", "Soberanes", "pugas", "123", 2),
-		("S46", "Licenciada", "Irma de Jesús", "Ramírez", "Álvarez", "irma", "123", 2),
-		("S47", "Maestra en Ciencias", "Martha Alicia", "Rocha", "Sánchez", "martha", "123", 2),
-		("S48", "Ingeniera", "Luz del Carmen", "Ruiz", "Gaytan", "luzcarmen", "123", 2),
-		("S49", "Ingeniera", "Ruth", "Saéz de Nanclarez", "Rodríguez", "ruth", "123", 2),
-		("S50", "Maestra", "Ma. Concepción Rocío", "Sánchez", "Cano", "maconceptionr", "123", 2),
-		("S51", "Ingeniera", "Ma. Concepción", "Sandoval", "Solis", "maconcepcion", "123", 2),
-		("S52", "Ingeniero", "Cirino", "Silva", "Tovar", "cirino", "123", 2),
-		("S53", "Ingeniero", "José Luis Fernando", "Suárez", "y Gómez", "suarezygomez", "123", 2),
-		("S54", "Ingeniero", "Rubén", "Trujillo", "Corona", "trujillo", "123", 2);
-		
+INSERT INTO usuario VALUES ("25", "Ingeniero", "Antonio", "Águila", "Reyes", "aguila", "12345", 1);
+INSERT INTO usuario VALUES ("26", "Doctora", "María del Rosario", "Baltazar", "Flores", "baltazar", "123", 2);
+INSERT INTO usuario VALUES ("27", "Ingeniero", "José Gerardo", "Carpio", "Flores", "carpiof", "123", 2);
+INSERT INTO usuario VALUES ("28", "Doctor", "Juan Martín", "Carpio", "Valadez", "carpiov", "123", 2);
+INSERT INTO usuario VALUES ("29", "Licenciada", "Elizabeth", "Castellanos", "Nolasco", "nolasco", "123", 2);
+INSERT INTO usuario VALUES ("30", "Ingeniera", "María Patricia", "Castillo", "Martínez", "castillo", "123", 2);
+INSERT INTO usuario VALUES ("31", "Ingeniero", "Luis Roberto", "Gallegos", "Muñoz", "gallegos", "123", 2);
+INSERT INTO usuario VALUES ("32", "Ingeniero", "Domingo", "García", "Ornelas", "domingo", "123", 2);
+INSERT INTO usuario VALUES ("33", "Ingeniero", "Hector Federico", "Godínez", "Cabrera", "godinez", "123", 2);
+INSERT INTO usuario VALUES ("34", "Ingeniera", "Laura Patricia", "Guevara", "Rangel", "laurap", "123", 2);
+INSERT INTO usuario VALUES ("35", "Ingeniero", "Luis Eduardo", "Gutiérrez", "Ayala", "ayala", "123", 2);
+INSERT INTO usuario VALUES ("36", "Ingeniera", "Angélica Benita", "Hernández", "Carranza", "benita", "123", 2);
+INSERT INTO usuario VALUES ("37", "Ingeniera", "Laura", "Juárez", "Guerra", "laura", "123", 2);
+INSERT INTO usuario VALUES ("38", "Ingeniero", "Carlos Rafael", "Levy", "Rojas", "levy", "123", 2);
+INSERT INTO usuario VALUES ("39", "Ingeniero", "Eugenio Conrado", "Marín", "González", "conrado", "123", 2);
+INSERT INTO usuario VALUES ("40", "Ingeniera", "Ana Columba Zurita", "Martínez", "Aguilar", "columba", "123", 2);
+INSERT INTO usuario VALUES ("41", "Ingeniero", "José Elias", "Martínez", "Arias", "elias", "123", 2);
+INSERT INTO usuario VALUES ("42", "Ingeniera", "Edna Militza", "Martínez", "Prado", "militza", "123", 2);
+INSERT INTO usuario VALUES ("43", "Ingeniero", "Juan Pablo", "Murillo", "Ruiz", "murillo", "123", 2);
+INSERT INTO usuario VALUES ("44", "Licenciada", "Angélica María", "Ortiz", "Gaucín", "gaucin", "123", 2);
+INSERT INTO usuario VALUES ("45", "Licenciado", "Héctor José", "Puga", "Soberanes", "pugas", "123", 2);
+INSERT INTO usuario VALUES ("46", "Licenciada", "Irma de Jesús", "Ramírez", "Álvarez", "irma", "123", 2);
+INSERT INTO usuario VALUES ("47", "Maestra en Ciencias", "Martha Alicia", "Rocha", "Sánchez", "martha", "123", 2);
+INSERT INTO usuario VALUES ("48", "Ingeniera", "Luz del Carmen", "Ruiz", "Gaytan", "luzcarmen", "123", 2);
+INSERT INTO usuario VALUES ("49", "Ingeniera", "Ruth", "Saéz de Nanclarez", "Rodríguez", "ruth", "123", 2);
+INSERT INTO usuario VALUES ("50", "Maestra", "Ma. Concepción Rocío", "Sánchez", "Cano", "maconceptionr", "123", 2);
+INSERT INTO usuario VALUES ("51", "Ingeniera", "Ma. Concepción", "Sandoval", "Solis", "maconcepcion", "123", 2);
+INSERT INTO usuario VALUES ("52", "Ingeniero", "Cirino", "Silva", "Tovar", "cirino", "123", 2);
+INSERT INTO usuario VALUES ("53", "Ingeniero", "José Luis Fernando", "Suárez", "y Gómez", "suarezygomez", "123", 2);
+INSERT INTO usuario VALUES ("54", "Ingeniero", "Rubén", "Trujillo", "Corona", "trujillo", "123", 2);
+
+
+
+
 INSERT INTO materia (clave, nombre, semestre, carrera, creditos, horas_t, horas_p)
 VALUES	("ACF-0901", "Cálculo Diferencial", 1, "Ingenieria en sistemas computacionales", 5, 3, 2),
 		("AED-1285", "Fundamentos de Programación", 1, "Ingenieria en sistemas computacionales", 5, 2, 3),

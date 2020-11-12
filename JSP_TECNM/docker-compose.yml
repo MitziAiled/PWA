@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+ db:
+  image: mitziailed/webappjspmysqltecnm
+  container_name: webappmysqltecnm_contenedor
+  restart: always
+  environment:
+   MYSQL_ROOT_PASSWORD: 'root'
+   MYSQL_DATABASE: 'proyectojsp_tecnm'
+  ports:
+   - '3306:3306'
+ web:
+  image: mitziailed/webappjsptomcattecnm
+  container_name: webapptomcattecnm_contenedor
+  restart: always
+  ports:
+   - "8088:8080"

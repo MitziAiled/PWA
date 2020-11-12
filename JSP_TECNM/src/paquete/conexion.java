@@ -9,9 +9,9 @@ public class conexion {
 	
 	public conexion() {
 		driver = "com.mysql.jdbc.Driver";
-		url = "jdbc:mysql://localhost:3306/proyectojsp_tecnm"; 
+		url = "jdbc:mysql://db:3306/proyectojsp_tecnm"; 
 		uss = "root";
-		pass = "";
+		pass = "root";
 	}
 	
 	public int loguear(String us, String contra) {
@@ -31,6 +31,7 @@ public class conexion {
 			}
 			conn.close();
 		}catch(ClassNotFoundException | SQLException e) {
+			System.out.println(e);
 		}
 		return rol;
 	}  
