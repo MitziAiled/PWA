@@ -1,0 +1,6 @@
+FROM mysql:latest
+
+ENV MYSQL_DATABASE="crudweb"
+ENV MYSQL_ROOT_PASSWORD="root"
+
+COPY ./Scripts/Script.sql /docker-entrypoint-initdb.d/Script.sql

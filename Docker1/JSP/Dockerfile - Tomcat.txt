@@ -1,0 +1,7 @@
+FROM tomcat:latest
+
+COPY JSP_TECNM.war /usr/local/tomcat/webapps/JSP_TECNM.war
+
+EXPOSE 8088
+
+CMD ["catalina.sh", "run"]
